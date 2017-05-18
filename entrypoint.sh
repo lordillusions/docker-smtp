@@ -1,4 +1,5 @@
 #!/bin/bash
+export TERM=linux
 set -e
 
 if [ "$MAILNAME" ]; then
