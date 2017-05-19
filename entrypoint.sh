@@ -26,8 +26,8 @@ opts=(
 	dc_other_hostnames ''
 	# dc_relay_domains "ibm.com;*.ibm.com"
 	# dc_relay_domains ''
-	# dc_relay_nets "$(ip addr show dev `ls -1 /sys/class/net | tail -1` | awk '$1 == "inet" { print $2 }' | xargs | sed 's/ /:/g')${RELAY_NETWORKS}"
-	dc_relay_nets ''
+	dc_relay_nets "$(ip addr show dev `ls -1 /sys/class/net | tail -1` | awk '$1 == "inet" { print $2 }' | xargs | sed 's/ /:/g')${RELAY_NETWORKS}"
+	# dc_relay_nets ''
 )
 
 if [ "$DISABLE_IPV6" ]; then 
